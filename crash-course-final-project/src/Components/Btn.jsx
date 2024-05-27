@@ -1,21 +1,17 @@
 import { Box, Button } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 
-export const Btn = (props) => {
-  const navigate = useNavigate()
-  function handleClick() {
-    navigate(props.onClick)
-  }
+export const Btn = ({onClick3, onClick2, text}) => {
+  
 
   return (
     <Box position="relative">
       <Button
-        onClick={handleClick}
+        onClick={onClick3 ? onClick3 : onClick2}
         colorScheme="red"
         border="4px"
         borderColor="gray.400"
       >
-        {props.text}
+        {text}
       </Button>
     </Box>
   );

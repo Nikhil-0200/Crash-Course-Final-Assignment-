@@ -3,17 +3,19 @@ import axios from "axios";
 import { Loading } from "../Components/Loading";
 import { Error } from "../Components/Error";
 import { useParams } from "react-router-dom";
-import { Card, CardBody, CardFooter, CardHeader, Heading, Text, Spacer } from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react";
 import { Btn } from "../Components/Btn";
+import { useNavigate } from "react-router-dom";
 
 
 export const TicketView = () => {
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [data, setData] = useState({});
   const {id} = useParams()
 
-  async function fetchData() {
+  async function fetchData(id) {
     setLoading(true);
     try {
       let res = await axios({
@@ -31,8 +33,8 @@ export const TicketView = () => {
   }
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData(id);
+  }, [id]);
 
   if (loading) {
     return <Loading />;
@@ -41,6 +43,22 @@ export const TicketView = () => {
   if (error) {
     return <Error />;
   }
+
+  async function handleClick(){
+    try {
+      let res = await axios({
+        method: "delete",
+        url: `http://localhost:8000/tickets/${id}`
+      })
+      if(res.status === 200){
+        navigate("/tickets")
+      }
+    } catch (error) {
+      setLoading(false)
+      setError(true);
+    }
+  }
+
 
   const {title, status, priority, description, assignee} = data
 
@@ -56,7 +74,7 @@ export const TicketView = () => {
           <Text>Priority: {priority}</Text>
         </CardBody>
         <CardFooter gap={4}>
-          <Btn text="Delete"/>
+          <Btn text="Delete" onClick2={handleClick}/>
           <Btn text="Edit"/>
         </CardFooter>
       </Card>
