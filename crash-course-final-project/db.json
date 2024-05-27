@@ -1,0 +1,100 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Login Features",
+      "description": "Build a login button with Navbar",
+      "assignee": "Nikhil",
+      "status": "pending",
+      "priority": 0
+    },
+    {
+      "id": "2",
+      "title": "User Registration",
+      "description": "Create a registration form with validation",
+      "assignee": "Karan",
+      "status": "progress",
+      "priority": 3
+    },
+    {
+      "id": "3",
+      "title": "Dashboard UI",
+      "description": "Design the dashboard layout and components",
+      "assignee": "Komal",
+      "status": "completed",
+      "priority": 2
+    },
+    {
+      "id": "4",
+      "title": "Profile Page",
+      "description": "Develop the user profile page with edit functionality",
+      "assignee": "Aman",
+      "status": "pending",
+      "priority": 5
+    },
+    {
+      "id": "5",
+      "title": "Notification System",
+      "description": "Implement real-time notifications",
+      "assignee": "Shivani",
+      "status": "progress",
+      "priority": 4
+    },
+    {
+      "id": "6",
+      "title": "Settings Page",
+      "description": "Create the settings page with various user preferences",
+      "assignee": "Nikita",
+      "status": "completed",
+      "priority": 1
+    },
+    {
+      "id": "7",
+      "title": "Search Functionality",
+      "description": "Add search functionality to the application",
+      "assignee": "Shyam",
+      "status": "pending",
+      "priority": 6
+    },
+    {
+      "id": "8",
+      "title": "Payment Gateway",
+      "description": "Integrate payment gateway for online transactions",
+      "assignee": "Ram",
+      "status": "progress",
+      "priority": 7
+    },
+    {
+      "id": "9",
+      "title": "Analytics Dashboard",
+      "description": "Develop an analytics dashboard for data visualization",
+      "assignee": "Nikhil",
+      "status": "completed",
+      "priority": 8
+    },
+    {
+      "id": "10",
+      "title": "Chat Feature",
+      "description": "Implement chat feature for real-time communication",
+      "assignee": "Karan",
+      "status": "pending",
+      "priority": 9
+    },
+    {
+      "id": "7f47",
+      "title": "Add Icon Please",
+      "description": "Add Icon Please",
+      "assignee": "Karan",
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": "6758",
+      "title": "Ticket Form",
+      "description": "Complete Ticket Form with functionality such as create ticket, delete ticket, view ticket, edit ticket",
+      "assignee": "Nikihl",
+      "status": "pending",
+      "priority": 8
+    }
+  ]
+}
