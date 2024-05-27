@@ -21,6 +21,7 @@ export const TicketCard = ({id, title, status, priority}) => {
 
   return (
       <Card h="280px">
+        <p>{id}</p>
         <CardHeader>
           <Heading size="md">Title: {title}</Heading>
         </CardHeader>

@@ -1,12 +1,12 @@
 {
   "tickets": [
     {
-      "id": "3",
       "title": "Dashboard UI",
       "description": "Design the dashboard layout and components",
       "assignee": "Komal",
       "status": "completed",
-      "priority": 2
+      "priority": 3,
+      "id": "3"
     },
     {
       "id": "5",
@@ -17,12 +17,12 @@
       "priority": 4
     },
     {
-      "id": "7",
       "title": "Search Functionality",
       "description": "Add search functionality to the application",
       "assignee": "Shyam",
-      "status": "pending",
-      "priority": 6
+      "status": "completed",
+      "priority": 6,
+      "id": "7"
     },
     {
       "id": "8",
@@ -39,6 +39,14 @@
       "assignee": "Karan",
       "status": "pending",
       "priority": 3
+    },
+    {
+      "id": "511c",
+      "title": "Edit Functionality",
+      "description": "Build An Edit Functionality",
+      "assignee": "Karan",
+      "status": "pending",
+      "priority": 9
     }
   ]
 }

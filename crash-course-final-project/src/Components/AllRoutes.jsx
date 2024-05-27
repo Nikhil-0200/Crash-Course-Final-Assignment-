@@ -7,6 +7,7 @@ import {Login} from "../Pages/Login"
 import { PrivatePage } from "../Pages/PrivatePage"
 import { TicketView } from "../Pages/TicketView"
 import { TicketCreate } from "../Pages/TicketCreate"
+import { Edit } from "../Pages/Edit"
 
 export const AllRoutes = () =>{
     return(
@@ -48,6 +49,8 @@ export const AllRoutes = () =>{
             </PrivatePage>
             
             } />
+
+            <Route path="/ticket/edit/:id" element={<Edit/>}/>
 
             <Route path="/login" element={<Login/>}/>
         </Routes>

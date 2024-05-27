@@ -25,7 +25,6 @@ export const TicketView = () => {
 
       setLoading(false);
       setData(res?.data);
-    console.log(res?.data);
     } catch (error) {
       setLoading(false);
       setError(true);
@@ -75,7 +74,7 @@ export const TicketView = () => {
         </CardBody>
         <CardFooter gap={4}>
           <Btn text="Delete" onClick2={handleClick}/>
-          <Btn text="Edit"/>
+          <Btn text="Edit" onClick={()=> navigate(`/ticket/edit/${id}`)}/>
         </CardFooter>
       </Card>
   )

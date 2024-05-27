@@ -6,6 +6,7 @@ import axios from "axios";
 import { Loading } from "../Components/Loading";
 import { Error } from "../Components/Error";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Tickets = () => {
   const [loading, setLoading] = useState(false);
@@ -13,7 +14,7 @@ export const Tickets = () => {
   const [data, setData] = useState([]);
   const [filterValue, setFilterValue] = useState("");
   const [sortValue, setSortValue] = useState("");
-
+  const navigate = useNavigate();
 
   async function fetchData(filterValue, sortValue) {
     setLoading(true);
@@ -58,7 +59,7 @@ export const Tickets = () => {
   return (  
     <Container maxW="4xl">
       <Flex align="center" justifyContent="end">
-        <Btn onClick="/ticketcreate" text="Create Ticket" />
+        <Btn onClick={()=>navigate("/ticketcreate")} text="Create Ticket" />
       </Flex>
 
       <Container >
