@@ -7,8 +7,12 @@ import {
   Container,
   Flex,
   Button,
+  useToast,
+  Wrap,
+  WrapItem 
 } from "@chakra-ui/react";
 import { useState } from "react";
+
 
 import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
@@ -16,6 +20,7 @@ import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 
 export const Login = () => {
+  const toast = useToast();
     const {isLoggedIn, login, logout} = useContext(AuthContext)
   const [credential, setCredential] = useState({
     email: "",
@@ -39,8 +44,26 @@ export const Login = () => {
       });
 
       login(res?.data?.token);
+
+      if(res.status === 200){
+        toast({
+          title: "Login successful.",
+          description: "You have successfully logged in.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        })      
+      }
+
     } catch (error) {
-      console.log("Error");
+      
+        toast({
+          title: "Error",
+          description: "An error occurred.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        })
     }
   }
 
@@ -87,6 +110,9 @@ export const Login = () => {
           </Flex>
         </FormControl>
       </Box>
+      
     </Container>
+    
+    
   );
 };

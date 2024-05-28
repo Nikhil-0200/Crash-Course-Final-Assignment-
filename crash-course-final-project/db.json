@@ -20,8 +20,8 @@
       "title": "Search Functionality",
       "description": "Add search functionality to the application",
       "assignee": "Shyam",
-      "status": "completed",
-      "priority": 6,
+      "status": "pending",
+      "priority": 2,
       "id": "7"
     },
     {
@@ -47,6 +47,14 @@
       "assignee": "Karan",
       "status": "pending",
       "priority": 9
+    },
+    {
+      "id": "c9ad",
+      "title": "Submit Project On Git Hub",
+      "description": "Submit project on github by first git add . / git commit -m \"msg\" / git push",
+      "assignee": "Ram",
+      "status": "progress",
+      "priority": 7
     }
   ]
 }
